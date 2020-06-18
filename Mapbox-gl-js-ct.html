@@ -55,24 +55,29 @@
     center: [85.324000, 27.717200], 
     zoom: 13
     });
-    
+  </script>
+  <script>
 
 
     /* Create a variable called "popup" to store a new Popup instance (ref: https://docs.mapbox.com/mapbox-gl-js/api/#popup). 
      * and set its HTML content to:
      * "<b>The Presidio.</b><br /> Explore to find a drinking fountain!"
      */
-    var popup = new mapboxgl.popup().setHTML("<b>Tundikhel</b><br />Is this the centre of Kathmandu?")
-
+    var popup = new mapboxgl.Popup({closeOnCLick: false})
+    .setHTML("<b>Tundikhel</b><br />Is this the centre of Kathmandu?")
+  </script>
+  <script>
     /* Create a variable called "marker," 
      * add to it a new Marker (ref: https://docs.mapbox.com/mapbox-gl-js/api/#marker),
      * set its Lng, Lat to [85.315054, 27.701114],
      * set its popup to the popup variable you created earlier,
      * and add it to the map.
      */
-    var marker = new mapboxgl.Marker().setLngLat([85.315054,27.701114]).setPopup(popup).addTo(map);
+    var marker = new mapboxgl.Marker()
+    .setLngLat([85.315054,27.701114])
+    .setPopup(popup)
+    .addTo(map);
     
-
   </script>
 </body>
 
